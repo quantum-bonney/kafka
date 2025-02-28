@@ -1,11 +1,12 @@
 from kafka import KafkaProducer
 
-# kafka_topic = "JAHMEIL"
+kafka_topic = "books"
 
 def run_producer(message):
     producer = KafkaProducer(bootstrap_servers="192.168.124.125:9092")
     
     print("sending data to kafka_topic....")
+    print(message)
     
     data = ",".join(message)
     
